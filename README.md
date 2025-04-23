@@ -9,7 +9,7 @@
 이 프로젝트의 목표는, 팀원이 함께 실무에 가까운 데이터 파이프라인을 구축하며  
 Python, SQL, Power BI, Databricks에 대한 실전 경험을 쌓는 것입니다.
 
-> **"한 마리의 데이터도 허투루 보지 않는다." – ShrimpLake Philosophy**
+> **"여긴 도망도 못쳐. 일단 타면 악으로 깡으로 낚아야 해." – ShrimpLake Philosophy**
 
 
 ## 🏗️ 아키텍처 개요
