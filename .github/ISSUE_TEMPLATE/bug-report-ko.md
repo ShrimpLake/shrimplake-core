@@ -1,6 +1,6 @@
 ---
 name: 🐞 버그 신고
-about: ShrimpLake 프로젝트의 데이터 수집, 분석, 저장, 시각화 중 발생한 버그를 신고합니다.
+about: 데이터 수집, 분석, 저장, 시각화 중 발생한 버그를 신고합니다.
 title: "[BUG] "
 labels: bug
 assignees: ''

@@ -1,6 +1,6 @@
 ---
 name: ✨ 기능 제안
-about: ShrimpLake 프로젝트에 필요한 새로운 기능 또는 개선사항을 제안합니다.
+about: 새롭게 필요한 기능이나 개선할 아이디어를 제안해주세요.
 title: "[Feature] "
 labels: enhancement
 assignees: ''
