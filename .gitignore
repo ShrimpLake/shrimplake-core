@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Databricks & Delta Lake
+*.dbc
+*.dbc-meta
+.dbutils/
+databricks_notebooks/
+*.delta
+delta_logs/
+
+# Power BI
+*.pbix
+*.pbit
+*.pbix-temp/
+*.pbip
+*.pbi/
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+.ionide/
+
+# Logs, Cache, Coverage
+*.log
+*.csv
+*.tsv
+*.xlsx
+*.json
+*.db
+*.sqlite
+*.sqlite3
+*.coverage
+*.cache/
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+.pytype/
+.pyre/
+.ruff_cache/
+htmlcov/
+coverage.xml
+
+# Distribution / packaging (미사용 시 제거)
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+*.manifest
+*.spec
+wheels/
+share/python-wheels/
+
+# IDE
+.spyderproject
+.spyproject
+.ropeproject
+.idea/
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+~$*
