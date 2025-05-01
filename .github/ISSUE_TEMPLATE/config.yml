@@ -1,14 +1,15 @@
 blank_issues_enabled: false
+use_template_chooser: true
 contact_links:
   - name: 🐞 버그 신고
-    url: https://github.com/ShrimpLake/issues/new?template=bug-report-ko.md
+    url: https://github.com/ShrimpLake/shrimplake-core/issues/new?template=bug-report-ko.md
     about: 데이터 수집, 저장, 시각화 등에서 발생한 문제를 신고해주세요.
 
   - name: ✨ 기능 제안
-    url: https://github.com/ShrimpLake/issues/new?template=feature-request-ko.md
+    url: https://github.com/ShrimpLake/shrimplake-core/new?template=feature-request-ko.md
     about: 새롭게 필요한 기능이나 개선 아이디어를 제안해주세요.
 
   - name: 📌 일반 제안/아이디어
-    url: https://github.com/ShrimpLake/discussions
+    url: https://github.com/ShrimpLake/shrimplake-core/discussions
     about: 기타 아이디어나 논의가 필요한 내용은 Discussions 탭을 활용해주세요.
 
