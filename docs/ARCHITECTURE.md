@@ -4,8 +4,8 @@ ShrimpLake는 **Azure 기반 Medallion Architecture**를 중심으로,
 데이터 수집부터 분석 및 시각화까지 이어지는 **엔드-투-엔드 파이프라인**을 설계합니다.
 
 
-## 🔄 데이터 흐름 요약 (Medallion Architecture)
-![Medallion Architecture](/docs/image/Medallion_Architecture.png)
+## 🔄 데이터 흐름 요약 (Data process overview)
+![Medallion Architecture](/docs/image/image1.png)
 
 
 ## 🧱 구성 요소별 설명
@@ -50,11 +50,11 @@ ShrimpLake는 **Azure 기반 Medallion Architecture**를 중심으로,
 
 
 
-## 🖼️ 아키텍처 다이어그램
+## 🖼️ 아키텍처 요약
 
-> 아래 이미지를 `docs/architecture/Medallion_Architecture.png`에 저장하여 참조하세요:
+> 아래 이미지를 참조하세요:
 
-![Medallion_Architecture](/docs/image/Medallion_Architecture.png)
+![Medallion_Architecture](/docs/image/image2.png)
 
 
 
