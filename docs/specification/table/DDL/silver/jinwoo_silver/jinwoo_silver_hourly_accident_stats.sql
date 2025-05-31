@@ -1,4 +1,4 @@
-- 시간대별 사고 발생 패턴 분석
+-- 시간대별 사고 발생 패턴 분석
 -- 연도/시간대별 서울시 전체 발생건수,사망,부상자수 
 SELECT
   searchyear,
@@ -10,7 +10,7 @@ WHERE gugun_code <> '000' AND HOUR <> '전체'
 GROUP BY searchyear, hour, stat_type
 ORDER BY searchyear, hour, stat_type;
 
-- 연도별/구별/시간대별 추세
+-- 연도별/구별/시간대별 추세
 -- 연도/구별 각 시간대에 따른 발생건수,사망,부상자수 
 SELECT
   searchyear,
@@ -24,10 +24,7 @@ WHERE gugun_code <>'000' AND HOUR <>'전체'
 GROUP BY searchyear, gugun_code, gugun_nm, hour, stat_type
 ORDER BY searchyear, gugun_nm, hour, stat_type;
 
-- 요일별 교차 집계(가능 시)
-* 평일 vs 주말 시간대별 패턴 차이
-
-- TOP3 위험 시간대
+-- TOP3 위험 시간대
 -- 구별로 “사고건수 많은 TOP3 시간대” 조회 (연도별)
 SELECT
   ranked.searchyear AS searchyear,
