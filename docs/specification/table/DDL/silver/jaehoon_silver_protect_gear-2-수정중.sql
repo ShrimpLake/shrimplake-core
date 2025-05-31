@@ -11,8 +11,8 @@ WITH LowWearingRateGuguns AS (
     FROM
         tra.protect_gear_acid_stats -- 스키마를 tra로 가정
     WHERE
-        rate_type = '착용률(%)'
-        AND gear_type = '안전모(헬멧)' -- 분석할 특정 보호장구
+        rate_type = '착용률 (%)'
+        AND gear_type = '안전모(헬맷)' -- 분석할 특정 보호장구
 ),
 -- 2단계: 특정 보호장구(예: 안전모) 미착용 시 사상자 데이터 준비
 UnwornCasualtyStats AS (
@@ -26,8 +26,8 @@ UnwornCasualtyStats AS (
         tra.protect_gear_acid_stats -- 스키마를 tra로 가정
     WHERE
         wearing_status = '미착용'
-        AND rate_type != '착용률(%)' -- 실제 사상자 수 데이터만 필터링 (즉, rate_type = '전체')
-        AND gear_type = '안전모(헬멧)' -- 분석할 특정 보호장구 (LowWearingRateGuguns와 일치시키기 위함)
+        AND rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 필터링 (즉, rate_type = '전체')
+        AND gear_type = '안전모(헬맷)' -- 분석할 특정 보호장구 (LowWearingRateGuguns와 일치시키기 위함)
 )
 -- 3단계: 착용률 낮은 구군의 미착용 사상자 수 집계
 SELECT
