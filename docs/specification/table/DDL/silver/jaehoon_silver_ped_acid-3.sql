@@ -12,7 +12,7 @@ SELECT
     --     ELSE "data" * 1
     -- END) AS weighted_data_component
 FROM
-    tra.ped_acid_stats -- 스키마를 tra로 가정
+    tra.ped_acid_stats 
 GROUP BY
     searchyear,
     gugun_nm,

@@ -4,12 +4,12 @@ SELECT
     gugun_nm,
     SUM("data") AS total_injuries_unworn_seatbelt_carseat
 FROM
-    tra.protect_gear_acid_stats -- 스키마를 tra로 가정
+    tra.protect_gear_acid_stats 
 WHERE
     gear_type = '안전벨트/카시트'
     AND wearing_status = '미착용'
     AND "stat_type" = '부상자수'
-    AND rate_type != '착용률(%)' -- 실제 사상자 수 데이터만 필터링
+    AND rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 필터링
 GROUP BY
     searchyear,
     gugun_nm

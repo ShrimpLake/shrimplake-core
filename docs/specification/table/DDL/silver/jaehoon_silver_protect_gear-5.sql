@@ -8,11 +8,11 @@ WITH UnwornDeaths AS (
         SUM("data") AS total_deaths_unworn,
         ROW_NUMBER() OVER (PARTITION BY searchyear, gear_type ORDER BY SUM("data") DESC) as rn
     FROM
-        tra.protect_gear_acid_stats -- 스키마를 tra로 가정
+        tra.protect_gear_acid_stats 
     WHERE
         wearing_status = '미착용'
         AND "stat_type" = '사망자수'
-        AND rate_type != '착용률(%)' -- 실제 사상자 수 데이터만 필터링
+        AND rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 필터링
     GROUP BY
         searchyear,
         gugun_nm,
@@ -29,7 +29,7 @@ SELECT
     t.gugun_nm,
     t.gear_type,
     t.total_deaths_unworn,
-    pr."data" AS wearing_rate_percentage -- DDL상 data 컬럼이 착용률을 포함
+    pr."data" AS wearing_rate_percentage 
 FROM
     TopGugunsUnwornDeaths t
 LEFT JOIN
@@ -37,10 +37,9 @@ LEFT JOIN
     ON t.searchyear = pr.searchyear
     AND t.gugun_nm = pr.gugun_nm
     AND t.gear_type = pr.gear_type
-    AND pr.rate_type = '착용률(%)'
+    AND pr.rate_type = '착용률 (%)'
 ORDER BY
     t.searchyear DESC,
     t.gear_type,
     t.total_deaths_unworn DESC; 
 
-    --wearing_rate_percentage 값이 안나옴. 

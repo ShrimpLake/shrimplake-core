@@ -6,7 +6,7 @@ SELECT
     age_group,
     SUM("data") AS total_data
 FROM
-    tra.driver_age_accident_stats -- 스키마를 tra로 가정
+    tra.driver_age_accident_stats 
 WHERE
     age_group = '20세이하' -- 분석할 특정 연령대
 GROUP BY

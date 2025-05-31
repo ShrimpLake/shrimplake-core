@@ -5,7 +5,7 @@ SELECT
     "stat_type",
     SUM("data") AS total_data
 FROM
-    tra.ped_acid_stats -- 스키마를 tra로 가정
+    tra.ped_acid_stats 
 WHERE
     ped_stat = '보도통행중'
 GROUP BY

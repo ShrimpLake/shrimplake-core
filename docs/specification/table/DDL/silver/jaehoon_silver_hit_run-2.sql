@@ -6,7 +6,7 @@ WITH HitAndRunOccurrences AS (
         SUM(CASE WHEN stat_type = '발생건수 (건)' THEN data ELSE 0 END) AS total_occurrences, -- 사용자 수정 반영: stat_type 및 단위 포함
         LAG(SUM(CASE WHEN stat_type = '발생건수 (건)' THEN data ELSE 0 END), 1, 0) OVER (PARTITION BY gugun_nm ORDER BY searchYear) AS previous_year_occurrences
     FROM
-        tra.hit_and_run_acid -- 스키마를 tra로 가정
+        tra.hit_and_run_acid 
     GROUP BY
         searchYear,
         gugun_nm

@@ -9,7 +9,7 @@ WITH LowWearingRateGuguns AS (
         "data" AS wearing_rate, -- rate_type='착용률(%)'이므로 "data"는 실제 착용률
         ROW_NUMBER() OVER (PARTITION BY searchyear, gear_type ORDER BY "data" ASC) as rn_asc
     FROM
-        tra.protect_gear_acid_stats -- 스키마를 tra로 가정
+        tra.protect_gear_acid_stats 
     WHERE
         rate_type = '착용률 (%)'
         AND gear_type = '안전모(헬맷)' -- 분석할 특정 보호장구
@@ -23,7 +23,7 @@ UnwornCasualtyStats AS (
         "stat_type",        -- 사망자수, 부상자수
         "data"              -- rate_type!='착용률(%)'이므로 "data"는 실제 사상자 수
     FROM
-        tra.protect_gear_acid_stats -- 스키마를 tra로 가정
+        tra.protect_gear_acid_stats 
     WHERE
         wearing_status = '미착용'
         AND rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 필터링 (즉, rate_type = '전체')
@@ -58,4 +58,4 @@ ORDER BY
     ucs.gugun_nm,
     ucs.gear_type;
 
-    --얘도 값이 안나옴. 모든 컬럼럼
+    

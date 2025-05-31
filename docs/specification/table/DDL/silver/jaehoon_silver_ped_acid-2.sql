@@ -8,7 +8,7 @@ WITH RoadSidePedData AS (
         SUM("data") AS total_data,
         LAG(SUM("data"), 1, 0) OVER (PARTITION BY gugun_nm, ped_stat, "stat_type" ORDER BY searchyear) AS previous_year_data
     FROM
-        tra.ped_acid_stats -- 스키마를 tra로 가정
+        tra.ped_acid_stats 
     WHERE
         ped_stat IN ('차도 통행중', '길가장자리구역통행중')
     GROUP BY

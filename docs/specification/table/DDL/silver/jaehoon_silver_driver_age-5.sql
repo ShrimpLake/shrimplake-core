@@ -7,7 +7,7 @@ WITH GugunAccidentChange AS (
         SUM(CASE WHEN "stat_type" = '발생건수' THEN "data" ELSE 0 END) AS total_accidents,
         LAG(SUM(CASE WHEN "stat_type" = '발생건수' THEN "data" ELSE 0 END), 1, 0) OVER (PARTITION BY gugun_nm ORDER BY searchyear) AS prev_year_accidents
     FROM
-        tra.driver_age_accident_stats -- 스키마를 tra로 가정
+        tra.driver_age_accident_stats 
     GROUP BY
         searchyear,
         gugun_nm

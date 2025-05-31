@@ -7,7 +7,7 @@ WITH OtherPedData AS (
         "stat_type",
         SUM("data") AS other_ped_data_sum
     FROM
-        tra.ped_acid_stats -- 스키마를 tra로 가정
+        tra.ped_acid_stats 
     WHERE
         ped_stat = '기타'
     GROUP BY
@@ -23,7 +23,7 @@ TotalPedData AS (
         "stat_type",
         SUM("data") AS total_ped_data_sum
     FROM
-        tra.ped_acid_stats -- 스키마를 tra로 가정
+        tra.ped_acid_stats 
     GROUP BY
         searchyear,
         gugun_nm,

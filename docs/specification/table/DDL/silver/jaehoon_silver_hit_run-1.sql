@@ -10,7 +10,7 @@ SELECT
         ELSE 0
     END AS fatality_rate_percentage
 FROM
-    tra.hit_and_run_acid -- 스키마를 tra로 가정
+    tra.hit_and_run_acid 
 GROUP BY
     searchYear,
     gugun_nm

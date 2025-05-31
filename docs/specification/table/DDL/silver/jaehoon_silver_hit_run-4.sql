@@ -7,7 +7,7 @@ SELECT
 FROM
     tra.hit_and_run_acid -- 
 WHERE
-    stat_type IN ('사망자수 (명)', '부상자수 (명)') -- 실제 데이터 값에 맞게 단위 포함하여 수정
+    stat_type IN ('사망자수 (명)', '부상자수 (명)')
 GROUP BY
     searchYear,
     stat_type
@@ -24,7 +24,7 @@ SELECT
 FROM
     tra.hit_and_run_acid -- 
 WHERE
-    stat_type IN ('사망자수 (명)', '부상자수 (명)') -- 실제 데이터 값에 맞게 단위 포함하여 수정
+    stat_type IN ('사망자수 (명)', '부상자수 (명)')
 ORDER BY
     gugun_nm,
     searchYear,

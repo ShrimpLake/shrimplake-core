@@ -8,8 +8,8 @@ WITH UnknownWearingData AS (
         "stat_type",
         SUM(CASE WHEN wearing_status = '착용불명' THEN "data" ELSE 0 END) AS unknown_wearing_data_sum
     FROM
-        tra.protect_gear_acid_stats -- 스키마를 tra로 가정
-    WHERE rate_type != '착용률(%)' -- 실제 사상자 수 데이터만 고려
+        tra.protect_gear_acid_stats 
+    WHERE rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 고려
     GROUP BY
         searchyear,
         gugun_nm,
@@ -25,8 +25,8 @@ TotalWearingData AS (
         "stat_type",
         SUM("data") AS total_wearing_data_sum
     FROM
-        tra.protect_gear_acid_stats -- 스키마를 tra로 가정
-    WHERE rate_type != '착용률(%)' -- 실제 사상자 수 데이터만 고려
+        tra.protect_gear_acid_stats 
+    WHERE rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 고려
     GROUP BY
         searchyear,
         gugun_nm,

@@ -7,7 +7,7 @@ WITH EconomicAgeGroupData AS (
         SUM("data") AS total_data,
         LAG(SUM("data"), 1, 0) OVER (PARTITION BY gugun_nm, "stat_type" ORDER BY searchyear) AS previous_year_data
     FROM
-        tra.driver_age_accident_stats -- 스키마를 tra로 가정
+        tra.driver_age_accident_stats 
     WHERE
         age_group IN ('21~30세', '31~40세', '41~50세', '51~60세') -- 주요 경제활동 인구
     GROUP BY

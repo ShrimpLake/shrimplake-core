@@ -7,7 +7,7 @@ SELECT
     "stat_type",
     SUM("data") AS total_data
 FROM
-    tra.protect_gear_acid_stats -- 스키마를 tra로 가정
+    tra.protect_gear_acid_stats 
 WHERE
     wearing_status IN ('착용', '미착용')
     AND rate_type != '착용률 (%)' -- 실제 사상자 수 데이터만 필터링

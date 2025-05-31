@@ -7,7 +7,7 @@ WITH UnknownAgeData AS (
         "stat_type",
         SUM("data") AS unknown_age_data_sum
     FROM
-        tra.driver_age_accident_stats -- 스키마를 tra로 가정
+        tra.driver_age_accident_stats 
     WHERE
         age_group = '연령불명'
     GROUP BY
@@ -23,7 +23,7 @@ TotalAgeData AS (
         "stat_type",
         SUM("data") AS total_age_data_sum
     FROM
-        tra.driver_age_accident_stats -- 스키마를 tra로 가정
+        tra.driver_age_accident_stats 
     GROUP BY
         searchyear,
         gugun_nm,

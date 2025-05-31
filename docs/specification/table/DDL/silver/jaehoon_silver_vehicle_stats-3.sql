@@ -5,7 +5,7 @@ SELECT
     "stat_type",
     SUM("data") AS total_data_for_trucks
 FROM
-    tra.traffic_acid_stats_by_vehicle -- 스키마를 tra로 가정
+    tra.traffic_acid_stats_by_vehicle 
 WHERE
     vehicle_mid_category = '화물' -- '화물차'의 정확한 명칭 확인 필요
 GROUP BY

@@ -2,11 +2,11 @@
 -- 1단계: 구군별 연간 뺑소니 발생건수 집계
 WITH GugunYearlyOccurrences AS (
     SELECT
-        searchYear, -- DDL에 정의된 컬럼명 사용
+        searchYear,
         gugun_nm,
-        SUM(CASE WHEN stat_type = '발생건수 (건)' THEN data ELSE 0 END) AS total_occurrences -- 컬럼명 및 값 수정
+        SUM(CASE WHEN stat_type = '발생건수 (건)' THEN data ELSE 0 END) AS total_occurrences
     FROM
-        tra.hit_and_run_acid -- 스키마를 tra로 가정
+        tra.hit_and_run_acid 
     GROUP BY
         searchYear,
         gugun_nm
