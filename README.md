@@ -41,20 +41,20 @@ Python, SQL, Power BI, Databricks에 대한 실전 경험을 쌓는 것입니다
 ## 📁 디렉토리 구조
 ``` bash
 ShrimpLake-Project/
-├── data/                # 원본 데이터 및 정제된 파일
-│   ├── raw/
-│   └── cleaned/
-├── notebooks/           # Databricks 노트북
-│   ├── ingestion.ipynb
+├── team5env/                 # 팀 개발 환경 구성 디렉토리
+├── notebooks/                # Databricks 노트북
 │   ├── transformation.ipynb
 │   └── analysis.ipynb
-├── sql/                 # SQL 쿼리문 저장
-│   └── summary_queries.sql
-├── dashboard/           # Power BI 파일
+├── sql/specification/table   # SQL 쿼리문 저장
+│   ├── ERD               
+│   ├── bronze            
+│   ├── silver            
+│   └── 기타
+├── dashboard/                # 대시보드 파일
 │   └── ShrimpLake_dashboard.pbix
-├── docs/                # 프로젝트 문서
+├── docs/                     # 프로젝트 문서
 │   └── architecture.png
-├── README.md
+└── README.md
 ```
 
 ## 👥 팀원 및 역할 분담
